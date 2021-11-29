@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Source Code Pro", monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 60px;
+  background: #333;
+}
+
+.holder {
+  display: flex;
+}
+
+.holder-text {
+  line-height: 90px;
+  color: #fff;
+}
+
+.holder-job {
+  margin-left: 1.5rem;
+  line-height: 90px;
+  height: 90px;
+  overflow: hidden;
+}
+
+.holder-job li {
+  list-style: none;
+  color: #d463cb;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 9s steps(3) infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -270px;
+  }
+}
+
+.holder-job li p {
+  line-height: 90px;
+  position: relative;
+}
+
+.holder-job li p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #333;
+  border-left: 2px solid #d463cb;
+  animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+
+  100% {
+    left: 0;
+  }
+}
